@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title>生命游戏</title>
+  <link rel="stylesheet" href="lifeGame.css">
+</head>
+
+<body>
+  <span id="container"></span>
+  <div>
+    <button id="prev" onclick="prevGeneration()" class="icon-previous">上一代</button>
+    <button id="next" onclick="nextGeneration()" class="icon-next">下一代</button>
+    <button id="start" onclick="clearInterval(timerId);timerId = setInterval(nextGeneration, gap);toggleDisable(true, prev, next, jump, this)" class="icon-play">开始</button>
+    <button id="pause" onclick="clearInterval(timerId);toggleDisable(false, prev, next, start, jump)" class="icon-pause">暂停</button>
+    <button onclick="generationsCount++;updateCount();saveGeneration();" class="icon-floppy-disk">保存为一代</button>
+  </div>
+  <div>
+     <div id="generationsCountShow">当前代：0/0</div>
+     <input type="range" min="0" max="0" value="0" style="width: 50%;" id="generations">
+     <button id="jump" class="icon-redo">跳转代</button>
+     <button onclick="generations=[];generationsMap={};generationsCount=0;maxGenerationsCount=0;updateCount()" class="icon-bin">清空代</button>
+  </div>
+  <div>
+    <button onclick="reset()" class="icon-spinner">重置</button>
+    <button onclick="setRule()" class="icon-cog">设置规则</button>
+    <span id="rule" class="icon-list"></span>
+  </div>
+  <input id="import" type="file" style="display: none;">
+  <div>
+    <button id="export" class="icon-download">导出当前代</button>
+    <button onclick="importInp.click()" class="icon-upload">导入</button>
+  </div>
+  <div>
+    <button id="state" class="icon-paint-format">设置填充状态</button>
+    <span id="stateShow"></span>
+  </div>
+  <div>
+    <button id="gridSize" class="icon-enlarge">设置网格大小</button>
+    <span id="gridSizeShow"></span>
+  </div>
+  <div>
+    <button id="gap" class="icon-stopwatch">设置迭代间隔</button>
+    <span id="gapShow"></span>
+  </div>
+  <script src="lifeGame.js"></script>
+</body>
+</html>

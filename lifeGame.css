@@ -1,0 +1,87 @@
+body {
+  --grid-side-len: 10px;
+}
+
+cell {
+  display: inline-block;
+  background-color: #fff;
+  float: left;
+  box-shadow: inset 0 0 0 .5px #777;
+  text-align: center;
+  width: var(--grid-side-len);
+  height: var(--grid-side-len);
+  border-radius: calc(var(--grid-side-len) / 4);
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?f93e9y');
+  src:  url('fonts/icomoon.eot?f93e9y#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?f93e9y') format('truetype'),
+    url('fonts/icomoon.woff?f93e9y') format('woff'),
+    url('fonts/icomoon.svg?f93e9y#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-floppy-disk:before {
+  content: "\e962";
+}
+.icon-spinner:before {
+  content: "\e984";
+}
+.icon-cog:before {
+  content: "\e994";
+}
+.icon-download:before {
+  content: "\e9c7";
+}
+.icon-upload:before {
+  content: "\e9c8";
+}
+.icon-play:before {
+  content: "\ea1c";
+}
+.icon-pause:before {
+  content: "\ea1d";
+}
+.icon-previous:before {
+  content: "\ea23";
+}
+.icon-next:before {
+  content: "\ea24";
+}
+.icon-paint-format:before {
+  content: "\e90c";
+}
+.icon-enlarge:before {
+  content: "\e989";
+}
+.icon-redo:before {
+  content: "\e968";
+}
+.icon-list:before {
+  content: "\e9bb";
+}
+.icon-stopwatch:before {
+  content: "\e952";
+}
+.icon-bin:before {
+  content: "\e9ac";
+}
+button {
+  height: 25.333px;
+}
